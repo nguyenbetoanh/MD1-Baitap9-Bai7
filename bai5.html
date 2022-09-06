@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--           Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi-->
+<!--             cuối kỳ-->
+<h2>xếp hạng học sinh dựa trên điểm 3 lần thi</h2><br>
+Hãy nhập điểm bài kiểm tra vào <br>
+<input id="nhap1" type="text"><br>
+Hãy nhập điểm thi giữa kỳ vào <br>
+<input id="nhap2" type="text"> <br>
+Hãy nhập điểm thi cuối kì vào <br>
+<input id="nhap3" type="text">
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+    function bamKiemTra() {
+        let A = +document.getElementById('nhap1').value;
+        let B = +document.getElementById('nhap2').value;
+        let C = +document.getElementById('nhap3').value;
+        let trungBinh = (A + B * 2 + C * 3) / 6
+        let ketQua
+        if (trungBinh >= 8) {
+            ketQua = 'Học sinh giỏi'
+        } else if (trungBinh >= 7) {
+            ketQua = 'Học sinh khá'
+        } else if (trungBinh >= 5) {
+            ketQua = 'Học sinh trung bình'
+        } else
+            ketQua = 'Chú bé đần'
+         document.getElementById('kq').innerHTML= ketQua
+    }
+
+
+</script>
+</body>
+</html>

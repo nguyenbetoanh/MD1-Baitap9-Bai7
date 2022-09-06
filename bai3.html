@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--          Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là-->
+<!--          lớn hay nhỏ hơn 0-->
+<h2>Kiểm tra 1 số nguyên bất kì có lớn 0 hay không ?</h2>
+Hãy nhập số 1 số nguyên bất kì vào
+<input id="nhap1" type="text"><br>
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+    function bamKiemTra() {
+        let A = +document.getElementById('nhap1').value
+        if (A > 0) {
+            document.getElementById('kq').innerHTML = '<h1> Số này lớn hơn 0</h1>'
+        } else if (A == 0) {
+            document.getElementById('kq').innerHTML = '<h1> hỏi đểu à  </h1>'
+        } else
+            document.getElementById('kq').innerHTML = '<h1> Số này nhỏ  hơn 0  </h1>'
+    }
+</script>
+</body>
+</html>

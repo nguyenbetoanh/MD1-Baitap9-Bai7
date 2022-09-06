@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+ <body>
+<!--           Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.-->
+<h2>Kiểm tra xem có đủ tuổi vào học lớp 10 hay không?</h2>
+Hãy nhập số tuổi  vào
+<input id="nhap1" type="text"><br>
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+    function bamKiemTra() {
+        let A = +document.getElementById('nhap1').value
+        if (A >= 15 ) {
+            document.getElementById('kq').innerHTML = '<h1> Đủ điều kiện vào học lớp 10 </h1>'
+        }else
+            document.getElementById('kq').innerHTML = '<h1>Không đủ điều kiện vào học lớp 10  </h1>'
+    }
+</script>
+</body>
+</html>

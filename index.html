@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--                           Bai 1 : Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không-->
+<h2>Kiểm tra xem A có chia hết B hay không ?</h2>
+Hãy nhập số a bất kì vào
+<input id="nhap1" type="text"><br>
+Hãy nhập số b bất kì vào
+<input id="nhap2" type="text">
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+    function bamKiemTra() {
+        let A = +document.getElementById('nhap1').value
+        let B = +document.getElementById('nhap2').value
+        let ketQua = A % B
+        console.log(ketQua)
+        if (ketQua ==0 ) {
+            document.getElementById('kq').innerHTML = '<h1> Số A chia hết cho Số B </h1>'
+        }else if(B==0){
+            document.getElementById('kq').innerHTML = '<h1> Lỗi! Xin nhập lại 1 số khác 0</h1>'
+        }else
+            document.getElementById('kq').innerHTML = '<h1> Số A không chia hết cho Số B  </h1>'
+    }
+</script>
+</body>
+</html>

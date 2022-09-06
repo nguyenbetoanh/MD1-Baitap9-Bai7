@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--             Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng-->
+<h2>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h2>
+Hãy nhập doanh số vào (đơn vị triệu)
+<input id="nhap1" type="text"><br>
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+  function bamKiemTra() {
+    let A = +document.getElementById('nhap1').value
+    let hoaHong =A/10
+    document.getElementById('kq').innerHTML = 'Số tiền hoa hồng nhận đc là'+hoaHong+'Triệu đồng'
+  }
+</script>
+</body>
+</html>

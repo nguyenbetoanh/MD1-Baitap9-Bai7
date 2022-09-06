@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--                     bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó-->
+<h2>Tìm số lớn nhất</h2><br>
+Hãy nhập số thứ nhất  vào <br>
+<input id="nhap1" type="text"><br>
+Hãy nhập số thứ hai  vào <br>
+<input id="nhap2" type="text"> <br>
+Hãy nhập số thứ ba vào <br>
+<input id="nhap3" type="text">
+<button onclick="bamKiemTra()">Kiểm tra</button>
+<h1 id="kq"></h1>
+<script>
+  function bamKiemTra() {
+    let A = +document.getElementById('nhap1').value;
+    let B = +document.getElementById('nhap2').value;
+    let C = +document.getElementById('nhap3').value;
+    let kq;
+    // if (A>B&&A>C){
+    //   kq= A
+    // }else if(B>C){
+    //   kq= B
+    // }else
+    //   kq=C
+    kq=Math.max(A,B,C)
+    document.getElementById('kq').innerHTML=kq+'là số lớn nhất'
+  }
+
+</script>
+</body>
+</html>
